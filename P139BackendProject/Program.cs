@@ -21,6 +21,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services.AddScoped<IAdvertService, AdvertService>();
 builder.Services.AddScoped<ISliderService, SliderServive>();
+builder.Services.AddScoped<IReviewService, ReviewService>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 var app = builder.Build();
 

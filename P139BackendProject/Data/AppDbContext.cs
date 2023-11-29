@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using P139BackendProject.Models;
-using System.Drawing.Drawing2D;
 
 namespace P139BackendProject.Data
 {
@@ -10,12 +9,22 @@ namespace P139BackendProject.Data
 
         public DbSet<Advert> Adverts { get; set; }
         public DbSet<Slider> Sliders { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Review> Reviews { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<ProductImage> ProductImages { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Advert>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Slider>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Customer>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Product>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<Category>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<ProductImage>().HasQueryFilter(m => !m.SoftDeleted);
         }
     }
 }

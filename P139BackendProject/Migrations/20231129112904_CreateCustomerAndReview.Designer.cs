@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using P139BackendProject.Data;
 
@@ -11,9 +12,10 @@ using P139BackendProject.Data;
 namespace P139BackendProject.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231129112904_CreateCustomerAndReview")]
+    partial class CreateCustomerAndReview
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -47,28 +49,6 @@ namespace P139BackendProject.Migrations
                     b.ToTable("Adverts");
                 });
 
-            modelBuilder.Entity("P139BackendProject.Models.Category", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("SoftDeleted")
-                        .HasColumnType("bit");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Categories");
-                });
-
             modelBuilder.Entity("P139BackendProject.Models.Customer", b =>
                 {
                     b.Property<int>("Id")
@@ -92,69 +72,6 @@ namespace P139BackendProject.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Customers");
-                });
-
-            modelBuilder.Entity("P139BackendProject.Models.Product", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<bool>("SoftDeleted")
-                        .HasColumnType("bit");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CategoryId");
-
-                    b.ToTable("Products");
-                });
-
-            modelBuilder.Entity("P139BackendProject.Models.ProductImage", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Image")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsMain")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("SoftDeleted")
-                        .HasColumnType("bit");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("ProductImages");
                 });
 
             modelBuilder.Entity("P139BackendProject.Models.Review", b =>
@@ -215,28 +132,6 @@ namespace P139BackendProject.Migrations
                     b.ToTable("Sliders");
                 });
 
-            modelBuilder.Entity("P139BackendProject.Models.Product", b =>
-                {
-                    b.HasOne("P139BackendProject.Models.Category", "Category")
-                        .WithMany("Products")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Category");
-                });
-
-            modelBuilder.Entity("P139BackendProject.Models.ProductImage", b =>
-                {
-                    b.HasOne("P139BackendProject.Models.Product", "Product")
-                        .WithMany("Images")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
-                });
-
             modelBuilder.Entity("P139BackendProject.Models.Review", b =>
                 {
                     b.HasOne("P139BackendProject.Models.Customer", "Customer")
@@ -248,19 +143,9 @@ namespace P139BackendProject.Migrations
                     b.Navigation("Customer");
                 });
 
-            modelBuilder.Entity("P139BackendProject.Models.Category", b =>
-                {
-                    b.Navigation("Products");
-                });
-
             modelBuilder.Entity("P139BackendProject.Models.Customer", b =>
                 {
                     b.Navigation("Messages");
-                });
-
-            modelBuilder.Entity("P139BackendProject.Models.Product", b =>
-                {
-                    b.Navigation("Images");
                 });
 #pragma warning restore 612, 618
         }
