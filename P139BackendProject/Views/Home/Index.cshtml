@@ -54,15 +54,21 @@
 <!-- Product Section Start-->
 <div class="product-section section pt-70 pb-60">
     <div class="container">
-
         <!-- Section Title Start-->
         <div class="row">
             <div class="section-title text-center col mb-60">
                 <h1>Featured Products</h1>
             </div>
         </div><!-- Section Title End-->
-        <partial name="_ProductsPartial" />
-
+        <div class="row parent-elem" data-count="@ViewBag.count">
+        <partial name="_ProductsPartial" model="@Model.Products" />
+        </div>
+    </div>
+    <div class="show-more mt-3 mb-3 d-flex justify-content-center w-100">
+        <button class="btn btn-success">Show more</button>
+    </div>
+    <div class="show-less mt-3 mb-3 d-flex justify-content-center w-100">
+        <button class="btn btn-danger d-none">Show less</button>
     </div>
 </div><!-- Product Section End-->
 
@@ -221,3 +227,7 @@
 
     </div>
 </div><!-- Blog Section End-->
+
+@section script{
+    <script src="~/js/product.js"></script>
+}

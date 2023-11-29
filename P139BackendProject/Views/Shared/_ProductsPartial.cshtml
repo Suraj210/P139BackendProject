@@ -1,14 +1,11 @@
-﻿@model HomeVM
+﻿@model List<ProductVM>
 <!-- Product Wrapper Start-->
-<div class="row">
 
-    @foreach (var product in Model.Products)
+    @foreach (var product in Model)
     {
         <!-- Product Start-->
         <div class="col-lg-4 col-md-6 col-12 mb-60">
-
             <div class="product">
-
                 <!-- Image Wrapper -->
                 <div class="image">
                     <!-- Image -->
@@ -47,9 +44,8 @@
                 </div>
 
             </div>
-
         </div>
 
         <!-- Product End-->
     }
-</div><!-- Product Wrapper End-->
+<!-- Product Wrapper End-->
