@@ -155,7 +155,7 @@
             <div class="blog-item col-lg-4 col-md-6 col-12 mb-60">
 
                 <!-- Image -->
-                <a href="blog-details.html" class="image"><img src="~/img/blog/@blog.Image" alt="blog"></a>
+                    <a asp-controller="Blog" asp-action="Detail" asp-route-id="@blog.Id" class="image"><img src="~/img/blog/@blog.Image" alt="blog"></a>
 
                 <!-- Content -->
                 <div class="content fix">
@@ -170,7 +170,7 @@
                     <p>@blog.Description.Substring(0, (int)Math.Ceiling(blog.Description.Length * 0.2))</p>
 
                     <!-- Read More Link -->
-                    <a href="blog-details.html" class="read-more">Read More</a>
+                        <a asp-controller="Blog" asp-action="Detail" asp-route-id="@blog.Id" class="read-more">Read More</a>
 
                 </div>
 

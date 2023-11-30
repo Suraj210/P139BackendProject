@@ -33,7 +33,7 @@
                         <div class="blog-item col-md-6 col-12 mb-60">
 
                             <!-- Image -->
-                            <a href="blog-details.html" class="image"><img src="~/img/blog/@item.Image" alt="blog"></a>
+                            <a asp-controller="Blog" asp-action="Detail" asp-route-id="@item.Id" class="image"><img src="~/img/blog/@item.Image" alt="blog"></a>
 
                             <!-- Content -->
                             <div class="content fix">

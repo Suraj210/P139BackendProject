@@ -19,7 +19,7 @@ namespace P139BackendProject.Services
             _mapper = mapper;
         }
 
-        public async Task<List<BlogDetailVM>> GetByIdAsync(int id)
+        public async Task<BlogDetailVM> GetByIdAsync(int id)
         {
             Blog blog = await _context.Blogs.Where(m => m.Id == id)
                                              .Include(m => m.Images)
@@ -27,7 +27,7 @@ namespace P139BackendProject.Services
                                              .ThenInclude(m => m.Tag)
                                              .FirstOrDefaultAsync();
 
-            return _mapper.Map<List<BlogDetailVM>>(blog);
+            return _mapper.Map<BlogDetailVM>(blog);
 
         }
 

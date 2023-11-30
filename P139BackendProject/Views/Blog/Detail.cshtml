@@ -1,4 +1,4 @@
-﻿
+﻿@model BlogDetailVM
 @{
     ViewData["Title"] = "Detail";
 }
@@ -30,30 +30,32 @@
                         <div class="blog-item">
 
                             <!-- Image -->
-                            <div class="img"><img src="~/img/blog/details.jpg" alt="blog"></div>
+                            <div class="img"><img src="~/img/blog/@Model.Images.FirstOrDefault(m=>m.IsMain).Image" alt="blog"></div>
 
                             <!-- Content -->
                             <div class="content fix">
 
                                 <!-- Publish Date -->
-                                <span class="publish"><span>Published on:</span> 25 May 2017</span>
+                                <span class="publish"><span>Published on:</span>@Model.CreateTime.ToString("MM/dd/yyyy")</span>
 
                                 <!-- Title -->
-                                <h4 class="title">If you are going to use a passage latin at Hampdun.</h4>
+                                <h4 class="title">@Model.Title</h4>
 
                                 <!-- Decs -->
-                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney Colleg Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and goingthrough the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. Thisbook is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                                <p>@Model.Description</p>
 
-                                <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                                <p>@Model.Description.Substring(0, (int)Math.Ceiling((Model.Description.Length * 0.2)))</p>
 
                                 <blockquote class="blockquote mt-20 mb-50">
-                                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at den-Sydney Colleg Virginia, looked up one of the more obscure Latin words, consectetur.</p>
+                                    <p>@Model.Description.Substring(0, (int)Math.Ceiling((Model.Description.Length * 0.4)))</p>
                                 </blockquote>
 
                                 <div class="row row-5 mb-20">
-                                    <div class="col-md-4 col-sm-6 col-xs-12 mb-10"><img src="~/img/blog/blog-gallery-1.jpg" alt=""></div>
-                                    <div class="col-md-4 col-sm-6 col-xs-12 mb-10"><img src="~/img/blog/blog-gallery-2.jpg" alt=""></div>
-                                    <div class="col-md-4 col-sm-6 col-xs-12 mb-10"><img src="~/img/blog/blog-gallery-3.jpg" alt=""></div>
+                                    @foreach (var item in Model.Images.Where(m=>!m.IsMain))
+                                    {
+                                        <div class="col-md-4 col-sm-6 col-xs-12 mb-10"><img src="~/img/blog/@item.Image" alt=""></div>
+                                    }
+
                                 </div>
 
                                 <p>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. Thisbook is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
@@ -188,11 +190,11 @@
                         <!-- Sdebar Post -->
                         <div class="sidebar-post fix">
                             <!-- Image -->
-                            <a href="blog-details.html" class="image"><img src="img/blog/sidebar-post-1.jpg" alt=""></a>
+                            <a  class="image"><img src="~/img/blog/sidebar-post-1.jpg" alt=""></a>
                             <!-- Content -->
                             <div class="content fix">
                                 <span class="date">14 JUN 2016</span>
-                                <a href="blog-details.html" class="title">Where can I get some?</a>
+                                <a  class="title">Where can I get some?</a>
                                 <p>Many desktop publis packages and web page editors.</p>
                             </div>
                         </div>
@@ -200,11 +202,11 @@
                         <!-- Sdebar Post -->
                         <div class="sidebar-post fix">
                             <!-- Image -->
-                            <a href="blog-details.html" class="image"><img src="img/blog/sidebar-post-2.jpg" alt=""></a>
+                            <a class="image"><img src="~/img/blog/sidebar-post-2.jpg" alt=""></a>
                             <!-- Content -->
                             <div class="content fix">
                                 <span class="date">20 JUN 2016</span>
-                                <a href="blog-details.html" class="title">Going to use a passage.</a>
+                                <a class="title">Going to use a passage.</a>
                                 <p>Many desktop publis packages and web page editors.</p>
                             </div>
                         </div>
@@ -212,11 +214,11 @@
                         <!-- Sdebar Post -->
                         <div class="sidebar-post fix">
                             <!-- Image -->
-                            <a href="blog-details.html" class="image"><img src="img/blog/sidebar-post-3.jpg" alt=""></a>
+                            <a class="image"><img src="~/img/blog/sidebar-post-3.jpg" alt=""></a>
                             <!-- Content -->
                             <div class="content fix">
                                 <span class="date">20 JUN 2016</span>
-                                <a href="blog-details.html" class="title">Going to use a passage.</a>
+                                <a  class="title">Going to use a passage.</a>
                                 <p>Many desktop publis packages and web page editors.</p>
                             </div>
                         </div>
@@ -231,13 +233,11 @@
 
                         <!-- Tag Cloud -->
                         <div class="tag-cloud fix">
-                            <a href="#">Bestsellers</a>
-                            <a href="#">Gifts</a>
-                            <a href="#">New</a>
-                            <a href="#">Christmas gift</a>
-                            <a href="#">Festive cakes</a>
-                            <a href="#">Home decor</a>
-                            <a href="#">Toys</a>
+                            @foreach (var item in Model.Tags)
+                            {
+                                <a href="#">@item.Name</a>
+                            }
+
                         </div>
 
                     </div>
@@ -269,4 +269,3 @@
         </div>
     </div>
 </div><!-- Blog Section End-->
-
