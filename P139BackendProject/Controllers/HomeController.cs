@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using P139BackendProject.Areas.Admin.ViewModels.Advert;
+using P139BackendProject.Areas.Admin.ViewModels.Blog;
 using P139BackendProject.Areas.Admin.ViewModels.Product;
 using P139BackendProject.Areas.Admin.ViewModels.Review;
 using P139BackendProject.Areas.Admin.ViewModels.Slider;
@@ -17,19 +18,19 @@ namespace P139BackendProject.Controllers
         private readonly ISliderService _sliderService;
         private readonly IReviewService _reviewService;
         private readonly IProductService _productService;
-        private readonly AppDbContext _context;
+        private readonly IBlogService _blogService;
 
         public HomeController(IAdvertService advertService,
                               ISliderService sliderService,
                               IReviewService reviewService,
                               IProductService productService,
-                              AppDbContext context)
+                              IBlogService blogService)
         {
             _advertService = advertService;
             _sliderService = sliderService;
             _reviewService = reviewService;
             _productService = productService;
-            _context = context;
+            _blogService = blogService;
 
         }
 
@@ -40,8 +41,9 @@ namespace P139BackendProject.Controllers
             List<SliderVM> sliders = await _sliderService.GetAllAsync();
             List<ReviewVM> reviews = await _reviewService.GetAllAsync();
             List<ProductVM> products = await _productService.GetAllByTakeAsync(3);
+            List<BlogVM> blogs = await _blogService.GetByTakeWithImagesAsync(3);
 
-            int productCount = await _context.Products.CountAsync();
+            int productCount = await _productService.GetProductCountAsync();
 
             ViewBag.count = productCount;
 
@@ -50,7 +52,8 @@ namespace P139BackendProject.Controllers
                 Adverts = adverts,
                 Sliders = sliders,
                 Reviews = reviews,
-                Products = products
+                Products = products,
+                Blogs = blogs
             };
 
             return View(model);

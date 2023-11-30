@@ -7,6 +7,8 @@ namespace P139BackendProject.Services.Interfaces
         Task<List<ProductVM>> GetAllAsync();
         Task<List<ProductVM>> GetAllByTakeAsync(int take);
         Task<List<ProductVM>> GetLoadedProductsAsync(int skipCount, int take);
+        Task<List<ProductVM>> GetPaginatedDatasAsync(int page, int take);
+        Task<int> GetProductCountAsync();
 
     }
 }

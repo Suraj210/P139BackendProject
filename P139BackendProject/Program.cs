@@ -23,6 +23,8 @@ builder.Services.AddScoped<IAdvertService, AdvertService>();
 builder.Services.AddScoped<ISliderService, SliderServive>();
 builder.Services.AddScoped<IReviewService, ReviewService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IBlogService, BlogService>();
+builder.Services.AddScoped<ITagService, TagService>();
 
 var app = builder.Build();
 

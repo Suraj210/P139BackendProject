@@ -14,6 +14,16 @@ namespace P139BackendProject.Data
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
+        public DbSet<Blog> Blogs { get; set; }
+
+        public DbSet<Tag> Tags { get; set; }
+
+        public DbSet<BlogTag> BlogTags { get; set; }
+
+        public DbSet<BlogImage> BlogImages { get; set; }
+
+        public DbSet<Subscribe> Subscribes { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
