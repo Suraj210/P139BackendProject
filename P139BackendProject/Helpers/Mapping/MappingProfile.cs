@@ -18,6 +18,7 @@ namespace P139BackendProject.Helpers.Mapping
         {
             CreateMap<Advert, AdvertVM>();
             CreateMap<Slider, SliderVM>();
+            CreateMap<Slider, SliderCreateVM>().ReverseMap();
             CreateMap<Review, ReviewVM>().ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.Customer.FullName))
                                          .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Customer.Image));
 
