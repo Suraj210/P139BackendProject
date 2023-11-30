@@ -1,10 +1,13 @@
 ﻿using AutoMapper;
+using P139BackendProject.Areas.Admin.ViewModels.AboutContent;
 using P139BackendProject.Areas.Admin.ViewModels.Advert;
 using P139BackendProject.Areas.Admin.ViewModels.Blog;
+using P139BackendProject.Areas.Admin.ViewModels.Brand;
 using P139BackendProject.Areas.Admin.ViewModels.Product;
 using P139BackendProject.Areas.Admin.ViewModels.Review;
 using P139BackendProject.Areas.Admin.ViewModels.Slider;
 using P139BackendProject.Areas.Admin.ViewModels.Tag;
+using P139BackendProject.Areas.Admin.ViewModels.Team;
 using P139BackendProject.Models;
 
 namespace P139BackendProject.Helpers.Mapping
@@ -26,6 +29,9 @@ namespace P139BackendProject.Helpers.Mapping
             CreateMap<Tag, TagVM>();
             CreateMap<Blog, BlogDetailVM>().ForMember(dest => dest.Tags, opt => opt.MapFrom(src => src.BlogTags.Select(m=>m.Tag).ToList()));
 
+            CreateMap<AboutContent, AboutContentVM>();
+            CreateMap<Brand, BrandVM>();
+            CreateMap<Team, TeamVM>();
 
         }
     }

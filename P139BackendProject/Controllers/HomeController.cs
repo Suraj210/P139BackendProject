@@ -1,12 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using P139BackendProject.Areas.Admin.ViewModels.Advert;
 using P139BackendProject.Areas.Admin.ViewModels.Blog;
 using P139BackendProject.Areas.Admin.ViewModels.Product;
 using P139BackendProject.Areas.Admin.ViewModels.Review;
 using P139BackendProject.Areas.Admin.ViewModels.Slider;
-using P139BackendProject.Data;
-using P139BackendProject.Models;
 using P139BackendProject.Services.Interfaces;
 using P139BackendProject.ViewModels;
 
