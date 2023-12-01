@@ -75,6 +75,7 @@ namespace P139BackendProject.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreateSubscribe(SubscribeCreateVM subscribe)
         {
+
             await _subscribeService.CreateAsync(subscribe);
             return RedirectToAction("Index", "Home");
         }
