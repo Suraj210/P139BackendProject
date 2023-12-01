@@ -1,0 +1,57 @@
+﻿@model AboutContentVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container" style="margin-left:30px">
+    <h1 class="text-center mt-3 mb-3">About Content</h1>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Title
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Video
+                    </th>
+                    <th>
+                        Create Time
+                    </th>
+                    <th>
+                        Operations
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="py-1">
+                        @Html.Raw( @Model.Title)
+                       
+                    </td>
+                    <td class="py-1">
+                        @Model.Description.Substring(0, (int)Math.Ceiling(Model.Description.Length * 0.2)) ....
+                    </td>
+                    <td class="py-1">
+                        @Model.Video
+                    </td>
+                    <td class="py-1">
+                        @Model.CreateTime.ToString("MM/dd/yyyy")
+                    </td>
+                    <td>
+                        <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@Model.Id">Detail</a>
+                        <a class="btn btn-outline-success" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
