@@ -37,8 +37,8 @@
                             @message.Message.Substring(0, (int)Math.Ceiling(message.Message.Length * 0.2)) ....
                         </td>
                         <td>
-                            <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@message.Id">Detail</a>
-                            <form class="d-inline-block" method="post" asp-action="Delete" asp-route-id="@message.Id">
+                            <a class="btn btn-outline-info" asp-action="MessageDetail" asp-route-id="@message.Id">Detail</a>
+                            <form class="d-inline-block" method="post" asp-action="MessageDelete" asp-route-id="@message.Id">
                                 <button type="submit" class="btn btn-outline-danger">Delete</button>
                             </form>
                         </td>

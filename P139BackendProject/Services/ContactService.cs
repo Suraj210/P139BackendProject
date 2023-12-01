@@ -62,13 +62,31 @@ namespace P139BackendProject.Services
             return _mapper.Map<List<ContactMessageVM>>(await _context.ContactMessages.ToListAsync());
         }
 
-        public async Task<ContactMessageVM> GetByIdAsync(int id)
+        public async Task<ContactMessageVM> GetMessageByIdAsync(int id)
         {
             var datas = await _context.ContactMessages.FirstOrDefaultAsync(m => m.Id == id);
             ContactMessageVM contactMessage = _mapper.Map<ContactMessageVM>(datas);
             return contactMessage;
         }
 
+        public async Task<ContactInfoVM> GetInfoAsync()
+        {
+            return _mapper.Map<ContactInfoVM>(await _context.ContactInfos.FirstOrDefaultAsync());
+        }
 
+        public async Task EditInfoAsync(ContactInfoEditVM contact)
+        {
+            ContactInfo dbContactInfo = await _context.ContactInfos.FirstOrDefaultAsync(m => m.Id == contact.Id);
+
+            _mapper.Map(contact, dbContactInfo);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<ContactInfoVM> GetInfoByIdAsync(int id)
+        {
+            var datas = await _context.ContactInfos.FirstOrDefaultAsync(m => m.Id == id);
+            ContactInfoVM contactInfo = _mapper.Map<ContactInfoVM>(datas);
+            return contactInfo;
+        }
     }
 }

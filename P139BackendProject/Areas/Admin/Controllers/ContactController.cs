@@ -1,6 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using P139BackendProject.Areas.Admin.ViewModels.Advert;
 using P139BackendProject.Areas.Admin.ViewModels.Contact;
-using P139BackendProject.Areas.Admin.ViewModels.Slider;
+using P139BackendProject.Data;
+using P139BackendProject.Helpers.Extentions;
+using P139BackendProject.Models;
 using P139BackendProject.Services;
 using P139BackendProject.Services.Interfaces;
 
@@ -10,10 +15,14 @@ namespace P139BackendProject.Areas.Admin.Controllers
     public class ContactController : Controller
     {
         private readonly IContactService _contactService;
+        private readonly AppDbContext _context;
+        private readonly IMapper _mapper;
 
-        public ContactController(IContactService contactService)
+        public ContactController(IContactService contactService,AppDbContext context,IMapper mapper)
         {
             _contactService = contactService;
+            _context = context;
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -22,26 +31,85 @@ namespace P139BackendProject.Areas.Admin.Controllers
             return View(await _contactService.GetAllMessagesAsync());
         }
 
+     
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> MessageDelete(int id)
         {
             await _contactService.DeleteAsync(id);
             return RedirectToAction(nameof(MessageIndex));
         }
 
         [HttpGet]
-        public async Task<IActionResult> Detail(int? id)
+        public async Task<IActionResult> MessageDetail(int? id)
         {
             if (id is null) return BadRequest();
 
-            ContactMessageVM contactMessage = await _contactService.GetByIdAsync((int)id);
+            ContactMessageVM contactMessage = await _contactService.GetMessageByIdAsync((int)id);
 
             if (contactMessage is null) return NotFound();
 
             return View(contactMessage);
         }
 
+
+        [HttpGet]
+        public async Task<IActionResult> InfoIndex()
+        {
+            return View(await _contactService.GetInfoAsync());
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> InfoDetail(int? id)
+        {
+            if (id is null) return BadRequest();
+
+            ContactInfoVM contactInfo = await _contactService.GetInfoByIdAsync((int)id);
+
+            if (contactInfo is null) return NotFound();
+
+            return View(contactInfo);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> InfoEdit(int? id)
+        {
+            if (id is null) return BadRequest();
+
+            ContactInfoVM dbContactInfo = await _contactService.GetInfoByIdAsync((int)id);
+
+            if (dbContactInfo is null) return NotFound();
+
+            ContactInfoEditVM contactInfoEditVM = new()
+            {
+                Description = dbContactInfo.Description
+            };
+
+
+            return View(contactInfoEditVM);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> InfoEdit(int? id, ContactInfoEditVM request)
+        {
+
+            if (id is null) return BadRequest();
+
+            ContactInfoVM dbContactInfo = await _contactService.GetInfoByIdAsync((int)id);
+
+            if (dbContactInfo is null) return NotFound();
+
+
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            await _contactService.EditInfoAsync(request);
+
+            return RedirectToAction(nameof(InfoIndex));
+        }
 
     }
 }

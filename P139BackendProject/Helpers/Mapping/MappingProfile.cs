@@ -44,7 +44,11 @@ namespace P139BackendProject.Helpers.Mapping
             CreateMap<ContactVM, ContactMessageVM>().ReverseMap();
             CreateMap<ContactMessage, ContactMessageVM>().ReverseMap();
             CreateMap<ContactMessageCreateVM, ContactMessage>().ReverseMap();
-            
+            CreateMap<ContactInfo, ContactInfoVM>().ReverseMap();
+            CreateMap<ContactInfo, ContactInfoEditVM>().ReverseMap();
+
+
+
 
         }
     }

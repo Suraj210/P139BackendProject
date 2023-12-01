@@ -8,6 +8,9 @@ namespace P139BackendProject.Services.Interfaces
         Task<List<ContactMessageVM>> GetAllMessagesAsync();
         Task CreateAsync(ContactMessageCreateVM contact);
         Task DeleteAsync(int id);
-        Task<ContactMessageVM> GetByIdAsync(int id);
+        Task<ContactMessageVM> GetMessageByIdAsync(int id);
+        Task<ContactInfoVM> GetInfoAsync();
+        Task<ContactInfoVM> GetInfoByIdAsync(int id);
+        Task EditInfoAsync(ContactInfoEditVM contact);
     }
 }

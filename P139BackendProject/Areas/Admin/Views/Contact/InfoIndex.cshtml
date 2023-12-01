@@ -1,0 +1,44 @@
+﻿@model ContactInfoVM
+@{
+    ViewData["Title"] = "InfoIndex";
+}
+
+<div class="container" style="margin-left:30px">
+    <h1 class="text-center mt-3 mb-3">Contact Messages</h1>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Create Time
+                    </th>
+                    <th>
+                        Operations
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td class="py-1">
+                        @Model.Description.Substring(0, (int)Math.Ceiling(Model.Description.Length * 0.2)) ....
+                        </td>
+                        <td class="py-1">
+                            @Model.CreateTime.ToString("MM/dd/yyyy")
+                        </td>
+                        <td>
+                        <a class="btn btn-outline-info" asp-action="InfoDetail" asp-route-id="@Model.Id">Detail</a>
+                        <a class="btn btn-outline-success" asp-action="InfoEdit" asp-route-id="@Model.Id">Edit</a>
+                        </td>
+                    </tr>
+                
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
