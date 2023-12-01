@@ -41,7 +41,7 @@ namespace P139BackendProject.Services
             await team.Image.SaveFileAsync(path);
         }
 
-        public async Task Delete(int id)
+        public async Task DeleteAsync(int id)
         {
             Team team = await _context.Teams.FirstOrDefaultAsync(m => m.Id == id);
 

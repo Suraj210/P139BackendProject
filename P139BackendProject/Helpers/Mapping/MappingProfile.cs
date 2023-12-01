@@ -6,6 +6,7 @@ using P139BackendProject.Areas.Admin.ViewModels.Brand;
 using P139BackendProject.Areas.Admin.ViewModels.Product;
 using P139BackendProject.Areas.Admin.ViewModels.Review;
 using P139BackendProject.Areas.Admin.ViewModels.Slider;
+using P139BackendProject.Areas.Admin.ViewModels.Subscribe;
 using P139BackendProject.Areas.Admin.ViewModels.Tag;
 using P139BackendProject.Areas.Admin.ViewModels.Team;
 using P139BackendProject.Models;
@@ -37,6 +38,8 @@ namespace P139BackendProject.Helpers.Mapping
             CreateMap<Team, TeamVM>().ReverseMap();
             CreateMap<Team, TeamCreateVM>().ReverseMap();
             CreateMap<Team, TeamEditVM>().ReverseMap();
+            CreateMap<Subscribe, SubscribeVM>().ReverseMap();
+            CreateMap<SubscribeCreateVM, Subscribe>().ReverseMap();
 
 
         }

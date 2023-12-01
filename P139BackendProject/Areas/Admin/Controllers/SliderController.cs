@@ -10,16 +10,14 @@ namespace P139BackendProject.Areas.Admin.Controllers
     [Area("Admin")]
     public class SliderController : Controller
     {
-        private readonly AppDbContext _context;
         private readonly ISliderService _sliderService;
         private readonly IWebHostEnvironment _env;
 
 
-        public SliderController(AppDbContext context,
+        public SliderController(
                                 ISliderService sliderService,
                                 IWebHostEnvironment env)
         {
-            _context = context;
             _sliderService = sliderService;
             _env = env;
         }
@@ -96,7 +94,7 @@ namespace P139BackendProject.Areas.Admin.Controllers
 
             if (slider is null) return NotFound();
 
-            return View(new SliderEditVM { Image = slider.Image, Offer = slider.Offer, Heading=slider.Heading, Description = slider.Description });
+            return View(new SliderEditVM { Image = slider.Image, Offer = slider.Offer, Heading = slider.Heading, Description = slider.Description });
         }
 
 
@@ -109,7 +107,7 @@ namespace P139BackendProject.Areas.Admin.Controllers
             if (dbSlider is null) return NotFound();
             slider.Image = dbSlider.Image;
 
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return View(slider);
             }

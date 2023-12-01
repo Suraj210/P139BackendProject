@@ -6,7 +6,7 @@ namespace P139BackendProject.Services.Interfaces
     {
         Task<List<TeamVM>> GetAllAsync();
         Task<TeamVM> GetByIdAsync(int id);
-        Task Delete(int id);
+        Task DeleteAsync(int id);
         Task CreateAsync(TeamCreateVM vm);
         Task EditAsync(TeamEditVM slider);
     }

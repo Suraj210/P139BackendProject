@@ -89,7 +89,7 @@ namespace P139BackendProject.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
         {
-            await _teamService.Delete(id);
+            await _teamService.DeleteAsync(id);
 
             return RedirectToAction(nameof(Index));
         }

@@ -4,6 +4,7 @@ using P139BackendProject.Areas.Admin.ViewModels.Blog;
 using P139BackendProject.Areas.Admin.ViewModels.Product;
 using P139BackendProject.Areas.Admin.ViewModels.Review;
 using P139BackendProject.Areas.Admin.ViewModels.Slider;
+using P139BackendProject.Areas.Admin.ViewModels.Subscribe;
 using P139BackendProject.Services.Interfaces;
 using P139BackendProject.ViewModels;
 
@@ -16,18 +17,21 @@ namespace P139BackendProject.Controllers
         private readonly IReviewService _reviewService;
         private readonly IProductService _productService;
         private readonly IBlogService _blogService;
+        private readonly ISubscribeService _subscribeService;
 
         public HomeController(IAdvertService advertService,
                               ISliderService sliderService,
                               IReviewService reviewService,
                               IProductService productService,
-                              IBlogService blogService)
+                              IBlogService blogService,
+                              ISubscribeService subscribeService)
         {
             _advertService = advertService;
             _sliderService = sliderService;
             _reviewService = reviewService;
             _productService = productService;
             _blogService = blogService;
+            _subscribeService = subscribeService;
 
         }
 
@@ -50,7 +54,7 @@ namespace P139BackendProject.Controllers
                 Sliders = sliders,
                 Reviews = reviews,
                 Products = products,
-                Blogs = blogs
+                Blogs = blogs,
             };
 
             return View(model);
@@ -64,6 +68,15 @@ namespace P139BackendProject.Controllers
             List<ProductVM> products = await _productService.GetLoadedProductsAsync(skipCount, 3);
 
             return PartialView("_ProductsPartial", products);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateSubscribe(SubscribeCreateVM subscribe)
+        {
+            await _subscribeService.CreateAsync(subscribe);
+            return RedirectToAction("Index", "Home");
         }
     }
 }
