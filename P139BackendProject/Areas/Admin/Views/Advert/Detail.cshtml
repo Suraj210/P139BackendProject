@@ -1,0 +1,20 @@
+﻿@model AdvertVM
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container mt-5">
+
+    <div style="width:250px; height:250px;" class="image">
+        <img src="~/img/banner/@Model.Image" style="width:100%" />
+    </div>
+
+    <div class="slider-text">
+        <h6>@Model.Offer</h6>
+    </div>
+
+    <div class="back mt-2">
+        <a class="btn btn-info text-white" asp-action="Index">Back</a>
+    </div>
+</div>
+

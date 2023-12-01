@@ -16,7 +16,9 @@ namespace P139BackendProject.Helpers.Mapping
     {
         public MappingProfile()
         {
-            CreateMap<Advert, AdvertVM>();
+            CreateMap<Advert, AdvertVM>().ReverseMap();
+            CreateMap<Advert, AdvertCreateVM>().ReverseMap();
+            CreateMap<Advert, AdvertEditVM>().ReverseMap();
             CreateMap<Slider, SliderVM>();
             CreateMap<Slider, SliderCreateVM>().ReverseMap();
             CreateMap<Review, ReviewVM>().ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.Customer.FullName))
@@ -27,12 +29,13 @@ namespace P139BackendProject.Helpers.Mapping
                                            .ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Images.FirstOrDefault(m => m.IsMain).Image));
 
             CreateMap<Blog, BlogVM>().ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Images.FirstOrDefault(m => m.IsMain).Image));
-            CreateMap<Tag, TagVM>();
             CreateMap<Blog, BlogDetailVM>().ForMember(dest => dest.Tags, opt => opt.MapFrom(src => src.BlogTags.Select(m=>m.Tag).ToList()));
+            CreateMap<Tag, TagVM>();
 
             CreateMap<AboutContent, AboutContentVM>();
             CreateMap<Brand, BrandVM>();
             CreateMap<Team, TeamVM>();
+
 
         }
     }
