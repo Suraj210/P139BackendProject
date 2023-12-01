@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using P139BackendProject.Areas.Admin.ViewModels.Contact;
 using P139BackendProject.Services.Interfaces;
+using P139BackendProject.ViewModels;
 
 namespace P139BackendProject.Controllers
 {
@@ -17,7 +18,25 @@ namespace P139BackendProject.Controllers
         {
             ContactVM contact = await _contactService.GetDataAsync();
 
-            return View(contact);
+
+            ContactPageVM model = new()
+            {
+                Contact = contact,
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public async Task<IActionResult> CreateMessage(ContactMessageCreateVM request)
+        {
+
+            await _contactService.CreateAsync(request);
+
+            return RedirectToAction("Index", "Contact");
+
         }
     }
 

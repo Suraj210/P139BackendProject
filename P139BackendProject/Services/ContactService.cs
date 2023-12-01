@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+using P139BackendProject.Areas.Admin.ViewModels.Advert;
 using P139BackendProject.Areas.Admin.ViewModels.Contact;
 using P139BackendProject.Data;
 using P139BackendProject.Models;
@@ -11,12 +13,15 @@ namespace P139BackendProject.Services
 
         private readonly AppDbContext _context;
         private readonly ISettingService _settingService;
+        private readonly IMapper _mapper;
 
         public ContactService(AppDbContext context,
-                              ISettingService settingService)
+                              ISettingService settingService,
+                              IMapper mapper)
         {
             _context = context;
             _settingService = settingService;
+            _mapper = mapper;
         }
 
         public async Task<ContactVM> GetDataAsync()
@@ -36,5 +41,34 @@ namespace P139BackendProject.Services
 
             return model;
         }
+
+        public async Task CreateAsync(ContactMessageCreateVM contact)
+        {
+            var data = _mapper.Map<ContactMessage>(contact);
+            await _context.ContactMessages.AddAsync(data);
+            await _context.SaveChangesAsync();
+
+        }
+
+        public async Task DeleteAsync(int id)
+        {
+            ContactMessage dbContactMessage = await _context.ContactMessages.FirstOrDefaultAsync(m => m.Id == id);
+            _context.ContactMessages.Remove(dbContactMessage);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<List<ContactMessageVM>> GetAllMessagesAsync()
+        {
+            return _mapper.Map<List<ContactMessageVM>>(await _context.ContactMessages.ToListAsync());
+        }
+
+        public async Task<ContactMessageVM> GetByIdAsync(int id)
+        {
+            var datas = await _context.ContactMessages.FirstOrDefaultAsync(m => m.Id == id);
+            ContactMessageVM contactMessage = _mapper.Map<ContactMessageVM>(datas);
+            return contactMessage;
+        }
+
+
     }
 }

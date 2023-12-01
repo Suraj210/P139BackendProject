@@ -3,6 +3,7 @@ using P139BackendProject.Areas.Admin.ViewModels.AboutContent;
 using P139BackendProject.Areas.Admin.ViewModels.Advert;
 using P139BackendProject.Areas.Admin.ViewModels.Blog;
 using P139BackendProject.Areas.Admin.ViewModels.Brand;
+using P139BackendProject.Areas.Admin.ViewModels.Contact;
 using P139BackendProject.Areas.Admin.ViewModels.Product;
 using P139BackendProject.Areas.Admin.ViewModels.Review;
 using P139BackendProject.Areas.Admin.ViewModels.Slider;
@@ -40,7 +41,10 @@ namespace P139BackendProject.Helpers.Mapping
             CreateMap<Team, TeamEditVM>().ReverseMap();
             CreateMap<Subscribe, SubscribeVM>().ReverseMap();
             CreateMap<SubscribeCreateVM, Subscribe>().ReverseMap();
-
+            CreateMap<ContactVM, ContactMessageVM>().ReverseMap();
+            CreateMap<ContactMessage, ContactMessageVM>().ReverseMap();
+            CreateMap<ContactMessageCreateVM, ContactMessage>().ReverseMap();
+            
 
         }
     }
