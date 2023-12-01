@@ -30,6 +30,7 @@ builder.Services.AddScoped<ILayoutService, LayoutService>();
 builder.Services.AddScoped<IAboutContentService, AboutContentService>();
 builder.Services.AddScoped<IBrandService, BrandService>();
 builder.Services.AddScoped<ITeamService, TeamService>();
+builder.Services.AddScoped<IContactService, ContactService>();
 
 var app = builder.Build();
 

@@ -22,6 +22,8 @@ namespace P139BackendProject.Data
         public DbSet<AboutContent> AboutContents { get; set; }
         public DbSet<Team> Teams { get; set; }
         public DbSet<Brand> Brands { get; set; }
+        public DbSet<ContactInfo> ContactInfos { get; set; }
+        public DbSet<ContactMessage> ContactMessages { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -43,6 +45,8 @@ namespace P139BackendProject.Data
             modelBuilder.Entity<AboutContent>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<Team>().HasQueryFilter(m => !m.SoftDeleted);
             modelBuilder.Entity<Brand>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<ContactInfo>().HasQueryFilter(m => !m.SoftDeleted);
+            modelBuilder.Entity<ContactMessage>().HasQueryFilter(m => !m.SoftDeleted);
 
 
         }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "58aYFcTmLfNFvH425++pItidMZbNvMJHcbCK78nTLfs=",
+  "Hash": "KvaSaIobad5a9sKxKA8hOAUQHVIs/HxK3LKfY13JJ8o=",
   "Source": "P139BackendProject",
   "BasePath": "_content/P139BackendProject",
   "Mode": "Default",
@@ -2718,23 +2718,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\hero\\2.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\hero\\b8facd20-1db6-4e87-bde5-846c1ba2a9e2-04.jpg",
-      "SourceId": "P139BackendProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\",
-      "BasePath": "_content/P139BackendProject",
-      "RelativePath": "img/hero/b8facd20-1db6-4e87-bde5-846c1ba2a9e2-04.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\hero\\b8facd20-1db6-4e87-bde5-846c1ba2a9e2-04.jpg"
     },
     {
       "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\icon\\select-arrow-down.png",
