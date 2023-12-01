@@ -2329,10 +2329,6 @@
       "PackagePath": "staticwebassets\\img\\banner\\2.jpg"
     },
     {
-      "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\banner\\2801992d-21c2-4222-a169-c137f7fe1188 - 03.jpg",
-      "PackagePath": "staticwebassets\\img\\banner\\2801992d-21c2-4222-a169-c137f7fe1188 - 03.jpg"
-    },
-    {
       "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\bg\\footer-bg.png",
       "PackagePath": "staticwebassets\\img\\bg\\footer-bg.png"
     },
@@ -2527,6 +2523,14 @@
     {
       "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\team\\4.jpg",
       "PackagePath": "staticwebassets\\img\\team\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\team\\86cf6057-6f6a-450f-a169-538446c795a4-04.jpg",
+      "PackagePath": "staticwebassets\\img\\team\\86cf6057-6f6a-450f-a169-538446c795a4-04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\team\\8fb4539d-35ce-42fe-9bf6-4dd6fa61084b-04.jpg",
+      "PackagePath": "staticwebassets\\img\\team\\8fb4539d-35ce-42fe-9bf6-4dd6fa61084b-04.jpg"
     },
     {
       "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\testimonial\\1.jpg",

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wt3yLfOgbzYqkqGBS4JHR5Iv4yc+IccRmzkVT9bEnVw=",
+  "Hash": "UY1tGnM5Z8B8Lf9SWF0Bv3V8z3tJsKNdM1eE1NbAq8o=",
   "Source": "P139BackendProject",
   "BasePath": "_content/P139BackendProject",
   "Mode": "Default",
@@ -9928,23 +9928,6 @@
       "OriginalItemSpec": "wwwroot\\img\\banner\\2.jpg"
     },
     {
-      "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\banner\\2801992d-21c2-4222-a169-c137f7fe1188 - 03.jpg",
-      "SourceId": "P139BackendProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\",
-      "BasePath": "_content/P139BackendProject",
-      "RelativePath": "img/banner/2801992d-21c2-4222-a169-c137f7fe1188 - 03.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\banner\\2801992d-21c2-4222-a169-c137f7fe1188 - 03.jpg"
-    },
-    {
       "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\bg\\footer-bg.png",
       "SourceId": "P139BackendProject",
       "SourceType": "Discovered",
@@ -10776,6 +10759,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\team\\4.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\team\\86cf6057-6f6a-450f-a169-538446c795a4-04.jpg",
+      "SourceId": "P139BackendProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\",
+      "BasePath": "_content/P139BackendProject",
+      "RelativePath": "img/team/86cf6057-6f6a-450f-a169-538446c795a4-04.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\team\\86cf6057-6f6a-450f-a169-538446c795a4-04.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\team\\8fb4539d-35ce-42fe-9bf6-4dd6fa61084b-04.jpg",
+      "SourceId": "P139BackendProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\",
+      "BasePath": "_content/P139BackendProject",
+      "RelativePath": "img/team/8fb4539d-35ce-42fe-9bf6-4dd6fa61084b-04.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\team\\8fb4539d-35ce-42fe-9bf6-4dd6fa61084b-04.jpg"
     },
     {
       "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\testimonial\\1.jpg",
