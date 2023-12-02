@@ -3,6 +3,7 @@ using P139BackendProject.Areas.Admin.ViewModels.AboutContent;
 using P139BackendProject.Areas.Admin.ViewModels.Advert;
 using P139BackendProject.Areas.Admin.ViewModels.Blog;
 using P139BackendProject.Areas.Admin.ViewModels.Brand;
+using P139BackendProject.Areas.Admin.ViewModels.Category;
 using P139BackendProject.Areas.Admin.ViewModels.Contact;
 using P139BackendProject.Areas.Admin.ViewModels.Product;
 using P139BackendProject.Areas.Admin.ViewModels.Review;
@@ -53,6 +54,9 @@ namespace P139BackendProject.Helpers.Mapping
             CreateMap<AboutContentVM, AboutContentEditVM>().ReverseMap();
             CreateMap<TagCreateVM, Tag>().ReverseMap();
             CreateMap<TagEditVM, Tag>().ReverseMap();
+            CreateMap<Category, CategoryVM>().ReverseMap();
+            CreateMap<CategoryEditVM, Category>().ReverseMap();
+            CreateMap<CategoryCreateVM, Category>().ReverseMap();
 
 
 
