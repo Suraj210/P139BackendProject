@@ -1,0 +1,63 @@
+﻿@model List<ReviewVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <h1 class="text-center mt-3 mb-3">Review</h1>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Image
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Message
+                    </th>
+                    <th>
+                        Operations
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="py-1">
+                            <img style="width:100px; height:100px" src="~/img/testimonial/@item.Image" alt="image" />
+                        </td>
+                        <td>
+                            @item.FullName
+                        </td>
+                        <td>
+
+                            @if (item.Message != null)
+                            {
+                                @item.Message.Substring(0, (int)Math.Ceiling(item.Message.Length * 0.4))
+                            }
+
+
+                        </td>
+
+                        <td>
+                            <a class="btn btn-outline-info" asp-action="Detail" asp-route-id="@item.Id">Detail</a>
+                            <form class="d-inline-block" method="post">
+                                <button type="submit" class="btn btn-outline-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+
+
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+

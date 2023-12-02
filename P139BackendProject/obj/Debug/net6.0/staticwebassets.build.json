@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rxULljAD5SHjdMT6vfVoBVIdhmTlEFcHykujF/fSYa8=",
+  "Hash": "16ThMuk7Ssj3sdzM0PSGRT9IsMaRCgVkl0VvbDjbQX0=",
   "Source": "P139BackendProject",
   "BasePath": "_content/P139BackendProject",
   "Mode": "Default",
@@ -10489,23 +10489,6 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\3.jpg"
     },
     {
-      "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\product\\3f722379-0eb2-4ba5-8359-78f8fb401d87-04.jpg",
-      "SourceId": "P139BackendProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\",
-      "BasePath": "_content/P139BackendProject",
-      "RelativePath": "img/product/3f722379-0eb2-4ba5-8359-78f8fb401d87-04.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\product\\3f722379-0eb2-4ba5-8359-78f8fb401d87-04.jpg"
-    },
-    {
       "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\product\\4.jpg",
       "SourceId": "P139BackendProject",
       "SourceType": "Discovered",
@@ -10521,40 +10504,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\product\\4.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\product\\401766e7-56e6-4ca8-a86b-b6ad2877a59c-02.jpg",
-      "SourceId": "P139BackendProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\",
-      "BasePath": "_content/P139BackendProject",
-      "RelativePath": "img/product/401766e7-56e6-4ca8-a86b-b6ad2877a59c-02.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\product\\401766e7-56e6-4ca8-a86b-b6ad2877a59c-02.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\product\\46b74eae-ac78-4c69-a252-e4d18fbd3ffc-01.jpg",
-      "SourceId": "P139BackendProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\",
-      "BasePath": "_content/P139BackendProject",
-      "RelativePath": "img/product/46b74eae-ac78-4c69-a252-e4d18fbd3ffc-01.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\product\\46b74eae-ac78-4c69-a252-e4d18fbd3ffc-01.jpg"
     },
     {
       "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\product\\5.jpg",
@@ -10574,6 +10523,23 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\5.jpg"
     },
     {
+      "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\product\\5f74daea-4671-4130-b80d-7d62b35da510-04.jpg",
+      "SourceId": "P139BackendProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\",
+      "BasePath": "_content/P139BackendProject",
+      "RelativePath": "img/product/5f74daea-4671-4130-b80d-7d62b35da510-04.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\product\\5f74daea-4671-4130-b80d-7d62b35da510-04.jpg"
+    },
+    {
       "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\product\\6.jpg",
       "SourceId": "P139BackendProject",
       "SourceType": "Discovered",
@@ -10591,12 +10557,12 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\6.jpg"
     },
     {
-      "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\product\\a08a539c-04d0-4954-b12a-cedd3861f0bb-03.jpg",
+      "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\product\\e804816e-8479-4782-a544-130873731de5-03.jpg",
       "SourceId": "P139BackendProject",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\",
       "BasePath": "_content/P139BackendProject",
-      "RelativePath": "img/product/a08a539c-04d0-4954-b12a-cedd3861f0bb-03.jpg",
+      "RelativePath": "img/product/e804816e-8479-4782-a544-130873731de5-03.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -10605,24 +10571,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\product\\a08a539c-04d0-4954-b12a-cedd3861f0bb-03.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\product\\fbc7f9dc-afc6-4443-86e3-a597425773ce-03.jpg",
-      "SourceId": "P139BackendProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\",
-      "BasePath": "_content/P139BackendProject",
-      "RelativePath": "img/product/fbc7f9dc-afc6-4443-86e3-a597425773ce-03.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\product\\fbc7f9dc-afc6-4443-86e3-a597425773ce-03.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\product\\e804816e-8479-4782-a544-130873731de5-03.jpg"
     },
     {
       "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\product-details\\1.jpg",
