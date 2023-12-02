@@ -9,6 +9,7 @@ namespace P139BackendProject.Services.Interfaces
         Task<List<ProductVM>> GetLoadedProductsAsync(int skipCount, int take);
         Task<List<ProductVM>> GetPaginatedDatasAsync(int page, int take);
         Task<int> GetProductCountAsync();
+        Task<List<ProductVM>> SearchAsync(string searchText);
 
     }
 }

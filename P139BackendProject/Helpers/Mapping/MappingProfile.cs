@@ -48,6 +48,7 @@ namespace P139BackendProject.Helpers.Mapping
             CreateMap<ContactInfo, ContactInfoEditVM>().ReverseMap();
             CreateMap<AboutContent, AboutContentVM>().ReverseMap();
             CreateMap<AboutContent, AboutContentEditVM>().ReverseMap();
+            CreateMap<AboutContentVM, AboutContentEditVM>().ReverseMap();
 
 
 

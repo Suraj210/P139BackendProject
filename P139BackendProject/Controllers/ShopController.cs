@@ -37,5 +37,13 @@ namespace P139BackendProject.Controllers
         {
             return View();
         }
+
+
+        public async Task<IActionResult> Search(string searchText)
+        {
+
+            return View(await _productService.SearchAsync(searchText));
+        }
+
     }
 }

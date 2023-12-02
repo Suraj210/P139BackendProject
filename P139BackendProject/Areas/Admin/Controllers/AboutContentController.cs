@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using P139BackendProject.Areas.Admin.ViewModels.AboutContent;
 using P139BackendProject.Areas.Admin.ViewModels.Contact;
 using P139BackendProject.Data;
+using P139BackendProject.Services;
 using P139BackendProject.Services.Interfaces;
 
 namespace P139BackendProject.Areas.Admin.Controllers
@@ -37,6 +38,42 @@ namespace P139BackendProject.Areas.Admin.Controllers
             if (aboutContent is null) return NotFound();
 
             return View(aboutContent);
+        }
+
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(int? id)
+        {
+            if (id is null) return BadRequest();
+
+            AboutContentVM dbAboutContent = await _aboutContentService.GetByIdAsync((int)id);
+
+            if (dbAboutContent is null) return NotFound();
+
+            AboutContentEditVM model = _mapper.Map<AboutContentEditVM>(dbAboutContent);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int? id, AboutContentEditVM request)
+        {
+            if (id is null) return BadRequest();
+
+            AboutContentVM dbAboutContent = await _aboutContentService.GetByIdAsync((int)id);
+
+            if (dbAboutContent is null) return NotFound();
+
+
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            await _aboutContentService.EditAsync(request);
+
+            return RedirectToAction(nameof(Index));
         }
     }
 }
