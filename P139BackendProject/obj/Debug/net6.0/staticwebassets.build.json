@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2bUMuGdPRvxbAF7BaC2Zchu3N5gc6w8a4NmRLUItC80=",
+  "Hash": "VG8a6j7NCmZ3TXFWnVR79u6kcu4r79VQi9u9DvqNM5M=",
   "Source": "P139BackendProject",
   "BasePath": "_content/P139BackendProject",
   "Mode": "Default",
@@ -136,6 +136,23 @@
       "OriginalItemSpec": "wwwroot\\admin\\img\\user.jpg"
     },
     {
+      "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\admin\\js\\base.js",
+      "SourceId": "P139BackendProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\",
+      "BasePath": "_content/P139BackendProject",
+      "RelativePath": "admin/js/base.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\admin\\js\\base.js"
+    },
+    {
       "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\admin\\js\\main.js",
       "SourceId": "P139BackendProject",
       "SourceType": "Discovered",
@@ -151,23 +168,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\admin\\js\\main.js"
-    },
-    {
-      "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\admin\\js\\test.js",
-      "SourceId": "P139BackendProject",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\",
-      "BasePath": "_content/P139BackendProject",
-      "RelativePath": "admin/js/test.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\admin\\js\\test.js"
     },
     {
       "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\admin\\lib\\chart\\chart.min.js",
@@ -10506,6 +10506,23 @@
       "OriginalItemSpec": "wwwroot\\img\\product\\4.jpg"
     },
     {
+      "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\product\\46b74eae-ac78-4c69-a252-e4d18fbd3ffc-01.jpg",
+      "SourceId": "P139BackendProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\",
+      "BasePath": "_content/P139BackendProject",
+      "RelativePath": "img/product/46b74eae-ac78-4c69-a252-e4d18fbd3ffc-01.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\product\\46b74eae-ac78-4c69-a252-e4d18fbd3ffc-01.jpg"
+    },
+    {
       "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\product\\5.jpg",
       "SourceId": "P139BackendProject",
       "SourceType": "Discovered",
@@ -10538,6 +10555,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\product\\6.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\product\\fbc7f9dc-afc6-4443-86e3-a597425773ce-03.jpg",
+      "SourceId": "P139BackendProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\",
+      "BasePath": "_content/P139BackendProject",
+      "RelativePath": "img/product/fbc7f9dc-afc6-4443-86e3-a597425773ce-03.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\product\\fbc7f9dc-afc6-4443-86e3-a597425773ce-03.jpg"
     },
     {
       "Identity": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\product-details\\1.jpg",

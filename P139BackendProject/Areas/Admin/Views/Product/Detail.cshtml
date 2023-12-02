@@ -1,0 +1,80 @@
+﻿@model ProductVM
+@{
+    ViewData["Title"] = "Detail";
+}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+
+    .product-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 5px;
+    }
+
+    .product-info {
+        margin-top: 20px;
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    p {
+        color: #666;
+    }
+
+    .price {
+        color: #e44d26;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .active-image {
+        border: 3px solid greenyellow;
+    }
+</style>
+
+
+
+
+
+<div class="container mt-5">
+    @if (Model.Images.Count() != 0)
+    {
+        foreach (var item in Model.Images)
+        {
+            <img class="product-image @(item.IsMain ? "active-image": "")" src="~/img/product/@item.Image" alt="Product Image">
+        }
+    }
+
+    <div class="product-info">
+
+        <div class="slider-text ">
+            <h6>Product name: @Model.Name</h6>
+            <p>Product description: @Model.Description</p>
+            <p>Product price: @Model.Price</p>
+            <p>Category name: @Model.CategoryName</p>
+            <p>Product added date: @Model.CreateTime.ToString("MM/dd/yyyy")</p>
+        </div>
+
+        <div class="back mt-2 pb-5">
+            <a class="btn btn-info text-white" asp-action="Index">Back</a>
+        </div>
+    </div>
+</div>
+
+

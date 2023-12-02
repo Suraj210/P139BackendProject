@@ -25,12 +25,12 @@
       "PackagePath": "staticwebassets\\admin\\img\\user.jpg"
     },
     {
-      "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\admin\\js\\main.js",
-      "PackagePath": "staticwebassets\\admin\\js\\main.js"
+      "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\admin\\js\\base.js",
+      "PackagePath": "staticwebassets\\admin\\js\\base.js"
     },
     {
-      "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\admin\\js\\test.js",
-      "PackagePath": "staticwebassets\\admin\\js\\test.js"
+      "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\admin\\js\\main.js",
+      "PackagePath": "staticwebassets\\admin\\js\\main.js"
     },
     {
       "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\admin\\lib\\chart\\chart.min.js",
@@ -2497,12 +2497,20 @@
       "PackagePath": "staticwebassets\\img\\product\\4.jpg"
     },
     {
+      "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\product\\46b74eae-ac78-4c69-a252-e4d18fbd3ffc-01.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\46b74eae-ac78-4c69-a252-e4d18fbd3ffc-01.jpg"
+    },
+    {
       "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\product\\5.jpg",
       "PackagePath": "staticwebassets\\img\\product\\5.jpg"
     },
     {
       "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\product\\6.jpg",
       "PackagePath": "staticwebassets\\img\\product\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\product\\fbc7f9dc-afc6-4443-86e3-a597425773ce-03.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\fbc7f9dc-afc6-4443-86e3-a597425773ce-03.jpg"
     },
     {
       "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\section-title-bg.png",
