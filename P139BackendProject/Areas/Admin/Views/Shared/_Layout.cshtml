@@ -58,33 +58,38 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="index.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Home</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a asp-area="Admin" asp-controller="Advert" asp-action="Index" class="dropdown-item">Advertisement</a>
-                            <a asp-area="Admin" asp-controller="Brand" asp-action="Index" class="dropdown-item">Brand</a>
-                            <a asp-area="Admin" asp-controller="Team" asp-action="Index" class="dropdown-item">Team</a>
                             <a asp-area="Admin" asp-controller="Slider" asp-action="Index" class="dropdown-item">Slider</a>
-                            <a asp-area="Admin" asp-controller="Subscribe" asp-action="Index" class="dropdown-item">Subscribe</a>
-                            <a asp-area="Admin" asp-controller="Tag" asp-action="Index" class="dropdown-item">Tag</a>
-                            <a asp-area="Admin" asp-controller="AboutContent" asp-action="Index" class="dropdown-item">About Content</a>
+                            <a asp-area="Admin" asp-controller="Advert" asp-action="Index" class="dropdown-item">Advertisement</a>
                             <a asp-area="Admin" asp-controller="Product" asp-action="Index" class="dropdown-item">Product</a>
                             <a asp-area="Admin" asp-controller="Category" asp-action="Index" class="dropdown-item">Category</a>
                             <a asp-area="Admin" asp-controller="Review" asp-action="Index" class="dropdown-item">Review</a>
+                            <a asp-area="Admin" asp-controller="Subscribe" asp-action="Index" class="dropdown-item">Subscribe</a>
                         </div>
                     </div>
-                    <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>
-                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
-                    <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
-                    <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>About</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a asp-area="Admin" asp-controller="AboutContent" asp-action="Index" class="dropdown-item">About Content</a>
+                            <a asp-area="Admin" asp-controller="Team" asp-action="Index" class="dropdown-item">Team</a>
+                            <a asp-area="Admin" asp-controller="Brand" asp-action="Index" class="dropdown-item">Brand</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Blog</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a asp-area="Admin" asp-controller="Blog" asp-action="Index" class="dropdown-item">Blog</a>
+                            <a asp-area="Admin" asp-controller="Tag" asp-action="Index" class="dropdown-item">Tag</a>
+                        </div>
+                    </div>
                     <div class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Contact</a>
                         <div class="dropdown-menu bg-transparent border-0">
                             <a asp-area="Admin" asp-controller="Contact" asp-action="InfoIndex" class="dropdown-item" class="dropdown-item">Contact Info</a>
                             <a asp-area="Admin" asp-controller="Contact" asp-action="MessageIndex"  class="dropdown-item">Contact Message</a>
-                            <a >404 Error</a>
-                            <a href="blank.html" class="dropdown-item">Blank Page</a>
                         </div>
                     </div>
                 </div>

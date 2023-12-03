@@ -1,4 +1,5 @@
-﻿using P139BackendProject.Areas.Admin.ViewModels.Tag;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using P139BackendProject.Areas.Admin.ViewModels.Tag;
 
 namespace P139BackendProject.Services.Interfaces
 {
@@ -10,5 +11,7 @@ namespace P139BackendProject.Services.Interfaces
         Task CreateAsync(TagCreateVM tag);
         Task EditAsync(TagEditVM tag);
         Task<TagVM> GetByNameWithoutTrackingAsync(string name);
+        List<SelectListItem> GetAllSelectedAsync();
+
     }
 }

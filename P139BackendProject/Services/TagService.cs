@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using P139BackendProject.Areas.Admin.ViewModels.Tag;
 using P139BackendProject.Data;
@@ -59,6 +60,16 @@ namespace P139BackendProject.Services
         {
             return _mapper.Map<TagVM>(await _context.Tags.AsNoTracking()
                                                          .FirstOrDefaultAsync(m => m.Name.Trim().ToLower() == name.Trim().ToLower()));
+        }
+
+        public List<SelectListItem> GetAllSelectedAsync()
+        {
+            return _context.Tags.Select(m => new SelectListItem()
+            {
+                Text = m.Name,
+                Value = m.Id.ToString(),
+
+            }).ToList();
         }
     }
 }

@@ -5,7 +5,6 @@ using P139BackendProject.Data;
 using P139BackendProject.Helpers.Extentions;
 using P139BackendProject.Models;
 using P139BackendProject.Services.Interfaces;
-using System.Collections.Generic;
 
 namespace P139BackendProject.Services
 {
@@ -29,8 +28,6 @@ namespace P139BackendProject.Services
 
             return _mapper.Map<List<ProductVM>>(products);
         }
-
-
         public async Task<List<ProductVM>> GetAllByTakeAsync(int take)
         {
             List<Product> products = await _context.Products.Include(m => m.Images)
@@ -41,7 +38,6 @@ namespace P139BackendProject.Services
             return _mapper.Map<List<ProductVM>>(products);
 
         }
-
         public async Task<List<ProductVM>> GetLoadedProductsAsync(int skipCount, int take)
         {
             List<Product> products = await _context.Products.Include(m => m.Images)
@@ -53,12 +49,10 @@ namespace P139BackendProject.Services
             return _mapper.Map<List<ProductVM>>(products);
 
         }
-
         public async Task<int> GetProductCountAsync()
         {
             return await _context.Products.CountAsync();
         }
-
         public async Task<List<ProductVM>> GetPaginatedDatasAsync(int page, int take)
         {
             List<Product> products = await _context.Products.Include(m => m.Category)
@@ -68,7 +62,6 @@ namespace P139BackendProject.Services
                                                              .ToListAsync();
             return _mapper.Map<List<ProductVM>>(products);
         }
-
         public async Task<List<ProductVM>> SearchAsync(string searchText)
         {
             var dbProducts = await _context.Products.Include(m => m.Images)
@@ -80,16 +73,13 @@ namespace P139BackendProject.Services
 
             return _mapper.Map<List<ProductVM>>(dbProducts);
         }
-
         public async Task<Product> GetByIdAsync(int id) => await _context.Products.FindAsync(id);
-
         public async Task<List<ProductVM>> GetByTakeWithIncludes(int take)
         {
             return _mapper.Map<List<ProductVM>>(await _context.Products.Include(m => m.Category)
                                                                       .Include(m => m.Images)
                                                                       .Take(take).ToListAsync());
         }
-
         public async Task<ProductVM> GetByIdWithIncludesAsync(int id)
         {
             return _mapper.Map <ProductVM>(await _context.Products.Where(m => m.Id == id)
@@ -97,8 +87,6 @@ namespace P139BackendProject.Services
                                                                   .Include(m => m.Category)
                                                                   .FirstOrDefaultAsync());
         }
-
-
         public async Task DeleteAsync(int id)
         {
             Product dbproduct = await _context.Products.Include(m => m.Images).FirstOrDefaultAsync(m => m.Id == id);

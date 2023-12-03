@@ -20,7 +20,7 @@ namespace P139BackendProject.Controllers
         }
 
 
-        // GET: /<controller>/
+        [HttpGet]
         public async Task<IActionResult> Index(int page = 1, int take = 6)
         {
             List<BlogVM> dbPaginatedDatas = await _blogService.GetPaginatedDatasAsync(page, take);
@@ -39,15 +39,22 @@ namespace P139BackendProject.Controllers
             return View(model);
         }
 
+        [HttpGet]
         private async Task<int> GetPageCountAsync(int take)
         {
             int blogCount = await _blogService.GetCountAsync();
             return (int)Math.Ceiling((decimal)(blogCount) / take);
         }
 
-        public async Task<IActionResult> Detail(int id)
+
+        [HttpGet]
+        public async Task<IActionResult> Detail(int? id)
         {
-            BlogDetailVM blog = await _blogService.GetByIdAsync(id);
+            if (id is null) return BadRequest();
+
+            BlogDetailVM blog = await _blogService.GetByIdAsync((int)id);
+            if (blog is null) return NotFound();
+
 
             return View(blog);
         }

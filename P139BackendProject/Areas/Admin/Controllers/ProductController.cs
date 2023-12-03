@@ -30,7 +30,6 @@ namespace P139BackendProject.Areas.Admin.Controllers
         }
 
 
-
         [HttpGet]
         public async Task<IActionResult> Index(int page = 1, int take = 3)
         {

@@ -33,10 +33,11 @@ namespace P139BackendProject.Helpers.Mapping
 
 
 
-            CreateMap<Blog, BlogVM>().ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Images.FirstOrDefault(m => m.IsMain).Image));
-            CreateMap<Blog, BlogDetailVM>().ForMember(dest => dest.Tags, opt => opt.MapFrom(src => src.BlogTags.Select(m=>m.Tag).ToList()));
-            CreateMap<Tag, TagVM>();
+            CreateMap<Blog, BlogVM>().ForMember(dest => dest.Image, opt => opt.MapFrom(src => src.Images.FirstOrDefault(m => m.IsMain).Image))
+                                     .ForMember(dest => dest.Tags, opt => opt.MapFrom(src => src.BlogTags.Select(m => m.Tag).ToList()));
 
+
+            CreateMap<Blog, BlogDetailVM>().ForMember(dest => dest.Tags, opt => opt.MapFrom(src => src.BlogTags.Select(m=>m.Tag).ToList()));
             CreateMap<AboutContent, AboutContentVM>();
             CreateMap<Brand, BrandVM>();
             CreateMap<Team, TeamVM>().ReverseMap();
@@ -52,6 +53,7 @@ namespace P139BackendProject.Helpers.Mapping
             CreateMap<AboutContent, AboutContentVM>().ReverseMap();
             CreateMap<AboutContent, AboutContentEditVM>().ReverseMap();
             CreateMap<AboutContentVM, AboutContentEditVM>().ReverseMap();
+            CreateMap<Tag, TagVM>();
             CreateMap<TagCreateVM, Tag>().ReverseMap();
             CreateMap<TagEditVM, Tag>().ReverseMap();
             CreateMap<Category, CategoryVM>().ReverseMap();

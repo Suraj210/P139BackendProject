@@ -10,5 +10,6 @@ namespace P139BackendProject.Areas.Admin.ViewModels.Blog
         public string Description { get; set; }
         public List<BlogImage> Images { get; set; }
         public List<P139BackendProject.Models.Tag> Tags { get; set; }
+
     }
 }

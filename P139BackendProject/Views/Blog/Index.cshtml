@@ -45,7 +45,7 @@
                                 <h4 class="title"><a href="blog-details.html">@item.Title</a></h4>
 
                                 <!-- Decs -->
-                                <p>@item.Description.Substring(0, 70)</p>
+                                <p>@item.Description.Substring(0, (int)Math.Ceiling(item.Description.Length * 0.1))</p>
 
                                 <!-- Read More Link -->
                                 <a href="blog-details.html" class="read-more">Read More</a>
@@ -120,8 +120,8 @@
                                     <!-- Content -->
                                     <div class="content fix">
                                         <span class="date">@item.CreateTime.ToString("MM/dd/yyyy")</span>
-                                        <a href="blog-details.html" class="title">@item.Title.Substring(0, 15)</a>
-                                        <p>@item.Description.Substring(0, 20)</p>
+                                        <a href="blog-details.html" class="title">@item.Title.Substring(0, (int)Math.Ceiling(item.Title.Length * 0.3))</a>
+                                        <p>@item.Description.Substring(0, (int)Math.Ceiling(item.Description.Length * 0.1))</p>
                                     </div>
                                 </div>
                             }
