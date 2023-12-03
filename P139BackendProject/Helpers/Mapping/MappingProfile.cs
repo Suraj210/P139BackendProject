@@ -59,7 +59,8 @@ namespace P139BackendProject.Helpers.Mapping
             CreateMap<Category, CategoryVM>().ReverseMap();
             CreateMap<CategoryEditVM, Category>().ReverseMap();
             CreateMap<CategoryCreateVM, Category>().ReverseMap();
-
+            CreateMap<Blog, BlogEditVM>().ReverseMap();
+            CreateMap<Blog, BlogCreateVM>().ReverseMap();
 
 
 

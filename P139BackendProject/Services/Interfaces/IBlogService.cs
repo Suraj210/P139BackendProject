@@ -11,7 +11,7 @@ namespace P139BackendProject.Services.Interfaces
         Task<BlogVM> GetByNameWithoutTrackingAsync(string name);
         Task CreateAsync(BlogCreateVM blog);
         Task DeleteAsync(int id);
-
-
+        Task EditAsync(BlogEditVM blog);
+        Task DeleteBlogImageAsync(int id);
     }
 }

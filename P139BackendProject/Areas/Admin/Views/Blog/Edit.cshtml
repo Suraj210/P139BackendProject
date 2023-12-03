@@ -1,0 +1,111 @@
+﻿@model BlogEditVM
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<style>
+
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+
+    .product-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 5px;
+    }
+
+    .active-image {
+        border: 3px solid greenyellow;
+    }
+
+    .image-delete {
+        position: relative;
+    }
+
+        .image-delete button {
+            position: absolute;
+            left: 40px;
+            top: 58px;
+            opacity: 0;
+            transition: all 0.4s;
+        }
+
+        .image-delete:hover button {
+            position: absolute;
+            left: 40px;
+            top: 58px;
+            opacity: 1;
+        }
+
+        .image-delete:hover img {
+            opacity: 0.5;
+        }
+</style>
+
+<div class="container mt-5">
+    @if (Model.Images.Count() != 0)
+    {
+        <div class="d-flex flex-wrap">
+            @foreach (var item in Model.Images)
+            {
+                <div class="image-delete mx-1">
+                    <img class="product-image @(item.IsMain ? "active-image": "")" src="~/img/blog/@item.Image" alt="Product Image">
+                    @if (!item.IsMain)
+                    {
+                        <button data-id="@item.Id" class="btn btn-danger btn-sm">Delete</button>
+                    }
+                </div>
+
+            }
+        </div>
+
+    }
+
+    <form class="forms-sample" method="post" asp-action="Edit" enctype="multipart/form-data">
+        <div class="form-group mt-3">
+            <label asp-for="Title">Title</label>
+            <input asp-for="Title" class="form-control" required />
+            <span class="text-danger" asp-validation-for="Title"></span>
+        </div>
+
+
+        <div class="form-group mt-3">
+            <label asp-for="Description">Title</label>
+            <input asp-for="Description" class="form-control" required />
+            <span class="text-danger" asp-validation-for="Description"></span>
+        </div>
+
+
+        <div class="form-group">
+
+            @for (int i = 0; i < Model.Tags.Count(); i++)
+            {
+                <input asp-for="Tags[i].Value" type="hidden" class="form-control">
+                <input asp-for="Tags[i].Selected" /> @Model.Tags[i].Text
+
+            }
+
+        </div>
+
+
+        <div class="form-group">
+            <label asp-for="Photos">Image</label>
+            <input asp-for="Photos" class="form-control">
+        </div>
+
+        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+        <a class="btn btn-light" asp-action="Index">Back</a>
+    </form>
+</div>
+
+@section script{
+    <script src="~/js/blog.js"></script>
+
+}
+
