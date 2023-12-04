@@ -1,8 +1,8 @@
-﻿@inject ILayoutService _layoutService;
+﻿@inject  ILayoutService _layoutService;
 
 @{
 
-    HeaderVM headerDatas = _layoutService.GetHeaderDatas();
+    HeaderVM headerDatas = await _layoutService.GetHeaderDatas();
     FooterVM footerDatas = _layoutService.GetFooterDatas();
 }
 
@@ -72,7 +72,6 @@
                                     <!-- Account Menu -->
                                     <div class="account-menu col-md-4 col-12">
                                         <ul>
-                                            <li><a href="#">My Account</a></li>
                                             <li><a href="wishlist.html">Wishlist</a></li>
                                             <li>
                                                 <a href="#" data-toggle="dropdown"><i class="fa fa-shopping-cart"></i><span class="num">2</span></a>
@@ -164,6 +163,32 @@
                                         </ul>
                                     </li>
                                     <li><a asp-controller="Contact" asp-action="Index">contact</a></li>
+                                    @if (User.Identity.IsAuthenticated)
+                                    {
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">@headerDatas.UserFullName</a>
+                                            <ul class="sub-menu">
+                                                <li>
+                                                    <form method="post" asp-controller="Account" asp-action="Logout">
+                                                        <button style="background:transparent; border:none;" type="submit">Logout</button>
+                                                    </form>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                    }
+                                    else
+                                    {
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">My Account</a>
+                                            <ul class="sub-menu">
+                                                <li class=""><a class="px-1" asp-controller="Account" asp-action="Login">Login</a></li>
+                                                <li class=""><a class="px-1" asp-controller="Account" asp-action="Register">Register</a></li>
+
+                                            </ul>
+                                        </li>
+                                    }
                                 </ul>
                             </nav>
 

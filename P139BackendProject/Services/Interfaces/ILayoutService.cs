@@ -5,7 +5,6 @@ namespace P139BackendProject.Services.Interfaces
     public interface ILayoutService
     {
         FooterVM GetFooterDatas();
-
-        HeaderVM GetHeaderDatas();
+        Task<HeaderVM> GetHeaderDatas();
     }
 }
