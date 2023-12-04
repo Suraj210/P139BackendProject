@@ -1,0 +1,54 @@
+﻿@model List<SettingVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <h1 class="text-center mt-3 mb-3">Setting</h1>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Title
+                    </th>
+                    <th>
+                        Value
+                    </th>
+                    <th>
+                        Operations
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td style="white-space:normal">
+                            @item.Key
+                        </td>
+                        <td style="">
+                            @if (item.Key.Contains("Logo"))
+                            {
+                                <img src="~/img/@item.Value" />
+                            }
+                            else
+                            {
+                                @item.Value
+                            }
+                        </td>
+                        <td>
+                            <a class="btn btn-outline-primary mx-1" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                        </td>
+                    </tr>
+                }
+
+
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+

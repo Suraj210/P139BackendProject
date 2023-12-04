@@ -2341,10 +2341,6 @@
       "PackagePath": "staticwebassets\\img\\bg\\testimonial.png"
     },
     {
-      "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\blog\\0a09c1a4-5c77-4775-aa5d-a043e0f47fd1-02.jpg",
-      "PackagePath": "staticwebassets\\img\\blog\\0a09c1a4-5c77-4775-aa5d-a043e0f47fd1-02.jpg"
-    },
-    {
       "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\blog\\1.jpg",
       "PackagePath": "staticwebassets\\img\\blog\\1.jpg"
     },
@@ -2355,14 +2351,6 @@
     {
       "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\blog\\3.jpg",
       "PackagePath": "staticwebassets\\img\\blog\\3.jpg"
-    },
-    {
-      "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\blog\\5dd196c7-7c58-4c1a-9f5a-36b5683f847e-03.jpg",
-      "PackagePath": "staticwebassets\\img\\blog\\5dd196c7-7c58-4c1a-9f5a-36b5683f847e-03.jpg"
-    },
-    {
-      "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\blog\\ba1fcfac-e251-4804-bc01-fbf55679ebf2-04.jpg",
-      "PackagePath": "staticwebassets\\img\\blog\\ba1fcfac-e251-4804-bc01-fbf55679ebf2-04.jpg"
     },
     {
       "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\blog\\blog-gallery-1.jpg",
@@ -2379,6 +2367,10 @@
     {
       "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\blog\\details.jpg",
       "PackagePath": "staticwebassets\\img\\blog\\details.jpg"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\blog\\fc625c76-26b8-43f8-95ce-8b4a061b4415-01.jpg",
+      "PackagePath": "staticwebassets\\img\\blog\\fc625c76-26b8-43f8-95ce-8b4a061b4415-01.jpg"
     },
     {
       "Id": "C:\\Users\\acer\\Desktop\\P139BackendProject\\P139BackendProject\\wwwroot\\img\\blog\\sidebar-post-1.jpg",

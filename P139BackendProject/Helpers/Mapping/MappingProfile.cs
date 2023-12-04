@@ -7,6 +7,7 @@ using P139BackendProject.Areas.Admin.ViewModels.Category;
 using P139BackendProject.Areas.Admin.ViewModels.Contact;
 using P139BackendProject.Areas.Admin.ViewModels.Product;
 using P139BackendProject.Areas.Admin.ViewModels.Review;
+using P139BackendProject.Areas.Admin.ViewModels.Setting;
 using P139BackendProject.Areas.Admin.ViewModels.Slider;
 using P139BackendProject.Areas.Admin.ViewModels.Subscribe;
 using P139BackendProject.Areas.Admin.ViewModels.Tag;
@@ -61,6 +62,8 @@ namespace P139BackendProject.Helpers.Mapping
             CreateMap<CategoryCreateVM, Category>().ReverseMap();
             CreateMap<Blog, BlogEditVM>().ReverseMap();
             CreateMap<Blog, BlogCreateVM>().ReverseMap();
+            CreateMap<Setting, SettingVM>().ReverseMap();
+            CreateMap<Setting, SettingEditVM>().ReverseMap();
 
 
 
